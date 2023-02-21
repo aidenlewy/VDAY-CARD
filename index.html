@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)https://ciftygbxmldk-html.na.app.codingrooms.com/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><!-- Code injected by live-server -->
+<script type="text/javascript">
+	// Injection for browser console
+	function postConsole(method, args) {
+		_consoleLog('posted', method, args);
+		window.top.postMessage({method, args}, "*");
+	}
+
+	function argMapper(arg) {
+		if (arg === null) {
+			return 'null';
+		} else if (arg === undefined) {
+			return 'undefined';
+		} else if (typeof arg === 'function') {
+			return arg.toString();
+		} else if (arg instanceof Object) {
+			return JSON.stringify(arg);
+		}
+
+		return arg.toString();
+	}
+
+	const _consoleLog = console.log;
+	console.log = function () {
+		_consoleLog.apply(console, arguments);
+		const args = Array.prototype.slice.call(arguments).map(argMapper);
+		postConsole("log", args);
+	}
+
+	const _consoleError = console.error;
+	console.error = function () {
+		_consoleError.apply(console, arguments);
+		const args = Array.prototype.slice.call(arguments).map(argMapper);
+		postConsole("error", args);
+	}
+
+	const _consoleWarn = console.warn;
+	console.warn = function () {
+		_consoleWarn.apply(console, arguments);
+		const args = Array.prototype.slice.call(arguments).map(argMapper);
+		postConsole("warn", args);
+	}
+
+	const _consoleInfo = console.info;
+	console.info = function () {
+		_consoleInfo.apply(console, arguments);
+		const args = Array.prototype.slice.call(arguments).map(argMapper);
+		postConsole("info", args);
+	}
+</script>
+
+    
+    <title>Valentine's Card</title>
+    <link rel="stylesheet" href="./index_files/style.css">
+    <link href="./index_files/css2" rel="stylesheet">
+  </head>
+  <body>
+    <div class="card">
+      <h1 class="title">Happy Valentine's Day!</h1>
+      <img src="./index_files/heart-1179054__480.png" alt="Valentine&#39;s card image">
+      <p class="message">Dear Person,</p>
+      <p class="message">On this special day, I just wanted to let you know how much I love and appreciate you. You always know how to make me laugh, and your kindness and warmth always brighten up my day.</p>
+      <img src="./index_files/png-transparent-heart-heart-love-valentine-s-day-symbol-thumbnail.png" alt="Valentine&#39;s card image">
+      <h2 class="subtitle">I'm grateful for...</h2>
+      <ul class="list">
+        <li>Your smile</li>
+        <li>Your hugs</li>
+        <li>Your cooking skills</li>
+      </ul>
+      <p class="message">Thank you for being my partner in crime and my best friend. I can't imagine my life without you, and I'm so lucky to have you by my side.</p>
+      <p class="message">Love always,</p>
+      <p class="message">Aiden</p>
+    </div>
+  <!-- Code injected by live-server -->
+<script type="text/javascript">
+    // <![CDATA[  <-- For SVG support
+    if ('WebSocket' in window) {
+            (function() {
+                    function refreshCSS() {
+                            var sheets = [].slice.call(document.getElementsByTagName("link"));
+                            var head = document.getElementsByTagName("head")[0];
+                            for (var i = 0; i < sheets.length; ++i) {
+                                    var elem = sheets[i];
+                                    head.removeChild(elem);
+                                    var rel = elem.rel;
+                                    if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+                                            var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+                                            elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+                                    }
+                                    head.appendChild(elem);
+                            }
+                    }
+                    var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+                    var address = protocol + window.location.host + window.location.pathname + 'ws';
+                    var socket = new WebSocket(address);
+                    socket.onmessage = function(msg) {
+                            if (msg.data == 'reload') window.location.reload();
+                            else if (msg.data == 'refreshcss') refreshCSS();
+                    };
+                    console.log('Live reload enabled.');
+            })();
+    }
+    // ]]>
+</script>
+
+</body></html>
